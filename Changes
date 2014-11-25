@@ -1,7 +1,17 @@
 Revision history for Dancer-Serializer-CBOR
 
 {{$NEXT}}
+
+0.101 2014-11-25
  - add various plugins to dist.ini
+
+ [API CHANGES]
+
+ [BUG FIXES]
+
+ [DOCUMENTATION]
+
+ [ENHANCEMENTS]
 
 0.100 2014-11-20
  - (no information about this release available)
