@@ -4,8 +4,8 @@ package Dancer::Serializer::CBOR;
 # ABSTRACT: serializer for handling CBOR data
 
 use Carp;
-use Dancer::ModuleLoader;
 use Dancer::Exception qw(:all);
+use CBOR::XS;
 use base 'Dancer::Serializer::Abstract';
 
 # VERSION
@@ -26,16 +26,6 @@ use base 'Dancer::Serializer::Abstract';
 This serializer allows to serialize and deserialize automatically the CBOR (Concise Binary Object Representation) structure.
 
 =cut
-
-# helpers
-
-sub loaded { Dancer::ModuleLoader->load('CBOR::XS') }
-
-sub init {
-    my ($self) = @_;
-    raise core_serializer => 'CBOR::XS is needed and is not installed'
-      unless $self->loaded;
-}
 
 =method serialize
 
